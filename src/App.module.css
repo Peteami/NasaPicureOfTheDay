@@ -1,0 +1,11 @@
+.isLoading {
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.mainPage {
+	background-color: lightgray;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}

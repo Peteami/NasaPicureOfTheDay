@@ -1,0 +1,30 @@
+.scrollTopArrow {
+	text-align: center;
+}
+
+.scrollTop {
+	position: fixed;
+	width: 5%;
+	bottom: 200px;
+	align-items: center;
+	height: 20px;
+	margin-left: 90%;
+	z-index: 1000;
+	cursor: pointer;
+	animation: fadeIn 0.3s;
+	transition: opacity 0.4s;
+	opacity: 0.5;
+}
+
+.scrollTop:hover {
+	opacity: 1;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
