@@ -8,6 +8,7 @@ const Card = (props) => {
 	const likeSubmitHandler = () => {
 		setShowLike(!showLike);
 	};
+	console.log(props.picData);
 
 	return (
 		<div className={classes.card}>
@@ -20,17 +21,22 @@ const Card = (props) => {
 				)}
 			</div>
 
+			{/* <img src={props.picData.url} alt="Scene of the day" /> */}
+
 			{props.picData.mediaType === "image" ? (
 				<img src={props.picData.url} alt="Scene of the day" />
 			) : (
-				<iframe
-					title="video"
-					src={props.picData.url}
-					frameBorder="0"
-					gesture="media"
-					allow="encrypted-media"
-					allowFullScreen
-				/>
+				// <iframe
+				// 	title="video"
+				// 	src={props.picData.url}
+				// 	frameBorder="0"
+				// 	gesture="media"
+				// 	allow="encrypted-media"
+				// 	allowFullScreen
+				// />
+				<object data={props.picData.url}>
+					<embed src={props.picData.url}></embed>
+				</object>
 			)}
 
 			<div className={classes.cardBottom}>
